@@ -1,1 +1,0 @@
-/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/moteus_test.dir/link.d CMakeFiles/moteus_test.dir/src/moteus_n1.cpp.o -o moteus_test

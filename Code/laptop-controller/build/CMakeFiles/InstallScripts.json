@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/ubuntu_varty/projects/cubli-esp32/Code/laptop-controller/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

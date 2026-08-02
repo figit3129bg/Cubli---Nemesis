@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/ubuntu_varty/projects/cubli-esp32/Code/laptop-controller/build",
+  "command": "/usr/bin/c++  -isystem /usr/include/eigen3 -std=gnu++17 -o CMakeFiles/test_kf_standalone.dir/src/test_kf_standalone.cpp.o -c /home/ubuntu_varty/projects/cubli-esp32/Code/laptop-controller/src/test_kf_standalone.cpp",
+  "file": "/home/ubuntu_varty/projects/cubli-esp32/Code/laptop-controller/src/test_kf_standalone.cpp",
+  "output": "CMakeFiles/test_kf_standalone.dir/src/test_kf_standalone.cpp.o"
+},
+{
+  "directory": "/home/ubuntu_varty/projects/cubli-esp32/Code/laptop-controller/build",
+  "command": "/usr/bin/c++  -isystem /usr/include/eigen3 -std=gnu++17 -o CMakeFiles/test_kf_standalone.dir/src/kalman_filter.cpp.o -c /home/ubuntu_varty/projects/cubli-esp32/Code/laptop-controller/src/kalman_filter.cpp",
+  "file": "/home/ubuntu_varty/projects/cubli-esp32/Code/laptop-controller/src/kalman_filter.cpp",
+  "output": "CMakeFiles/test_kf_standalone.dir/src/kalman_filter.cpp.o"
+},
+{
+  "directory": "/home/ubuntu_varty/projects/cubli-esp32/Code/laptop-controller/build",
+  "command": "/usr/bin/c++  -isystem /usr/include/eigen3 -std=gnu++17 -o CMakeFiles/test_kf_standalone.dir/src/imu_preprocessing.cpp.o -c /home/ubuntu_varty/projects/cubli-esp32/Code/laptop-controller/src/imu_preprocessing.cpp",
+  "file": "/home/ubuntu_varty/projects/cubli-esp32/Code/laptop-controller/src/imu_preprocessing.cpp",
+  "output": "CMakeFiles/test_kf_standalone.dir/src/imu_preprocessing.cpp.o"
+}
+]
