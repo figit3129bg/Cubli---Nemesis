@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/ubuntu_varty/projects/cubli-esp32/build/cmake_install.cmake",
+		"/home/ubuntu_varty/projects/cubli-esp32/build/_deps/moteus-build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
