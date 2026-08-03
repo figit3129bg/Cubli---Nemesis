@@ -17,3 +17,12 @@ add_executable(test_kf_standalone
 
 # Tell CMake to supply Eigen3's header paths directly to GCC
 target_link_libraries(test_kf_standalone PRIVATE Eigen3::Eigen)
+
+# Live binary: reads real IMU CSV from esp32-imu-mode over serial and runs the KF on it
+add_executable(kf_live
+    src/kf_live.cpp
+    src/kalman_filter.cpp
+    src/imu_preprocessing.cpp
+    src/serial_port.cpp
+)
+target_link_libraries(kf_live PRIVATE Eigen3::Eigen)

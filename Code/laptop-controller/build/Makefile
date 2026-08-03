@@ -129,12 +129,26 @@ test_kf_standalone/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_kf_standalone.dir/build.make CMakeFiles/test_kf_standalone.dir/build
 .PHONY : test_kf_standalone/fast
 
+#=============================================================================
+# Target rules for targets named kf_live
+
+# Build rule for target.
+kf_live: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 kf_live
+.PHONY : kf_live
+
+# fast build rule for target.
+kf_live/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kf_live.dir/build.make CMakeFiles/kf_live.dir/build
+.PHONY : kf_live/fast
+
 src/imu_preprocessing.o: src/imu_preprocessing.cpp.o
 .PHONY : src/imu_preprocessing.o
 
 # target to build an object file
 src/imu_preprocessing.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_kf_standalone.dir/build.make CMakeFiles/test_kf_standalone.dir/src/imu_preprocessing.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kf_live.dir/build.make CMakeFiles/kf_live.dir/src/imu_preprocessing.cpp.o
 .PHONY : src/imu_preprocessing.cpp.o
 
 src/imu_preprocessing.i: src/imu_preprocessing.cpp.i
@@ -143,6 +157,7 @@ src/imu_preprocessing.i: src/imu_preprocessing.cpp.i
 # target to preprocess a source file
 src/imu_preprocessing.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_kf_standalone.dir/build.make CMakeFiles/test_kf_standalone.dir/src/imu_preprocessing.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kf_live.dir/build.make CMakeFiles/kf_live.dir/src/imu_preprocessing.cpp.i
 .PHONY : src/imu_preprocessing.cpp.i
 
 src/imu_preprocessing.s: src/imu_preprocessing.cpp.s
@@ -151,6 +166,7 @@ src/imu_preprocessing.s: src/imu_preprocessing.cpp.s
 # target to generate assembly for a file
 src/imu_preprocessing.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_kf_standalone.dir/build.make CMakeFiles/test_kf_standalone.dir/src/imu_preprocessing.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kf_live.dir/build.make CMakeFiles/kf_live.dir/src/imu_preprocessing.cpp.s
 .PHONY : src/imu_preprocessing.cpp.s
 
 src/kalman_filter.o: src/kalman_filter.cpp.o
@@ -159,6 +175,7 @@ src/kalman_filter.o: src/kalman_filter.cpp.o
 # target to build an object file
 src/kalman_filter.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_kf_standalone.dir/build.make CMakeFiles/test_kf_standalone.dir/src/kalman_filter.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kf_live.dir/build.make CMakeFiles/kf_live.dir/src/kalman_filter.cpp.o
 .PHONY : src/kalman_filter.cpp.o
 
 src/kalman_filter.i: src/kalman_filter.cpp.i
@@ -167,6 +184,7 @@ src/kalman_filter.i: src/kalman_filter.cpp.i
 # target to preprocess a source file
 src/kalman_filter.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_kf_standalone.dir/build.make CMakeFiles/test_kf_standalone.dir/src/kalman_filter.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kf_live.dir/build.make CMakeFiles/kf_live.dir/src/kalman_filter.cpp.i
 .PHONY : src/kalman_filter.cpp.i
 
 src/kalman_filter.s: src/kalman_filter.cpp.s
@@ -175,7 +193,56 @@ src/kalman_filter.s: src/kalman_filter.cpp.s
 # target to generate assembly for a file
 src/kalman_filter.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_kf_standalone.dir/build.make CMakeFiles/test_kf_standalone.dir/src/kalman_filter.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kf_live.dir/build.make CMakeFiles/kf_live.dir/src/kalman_filter.cpp.s
 .PHONY : src/kalman_filter.cpp.s
+
+src/kf_live.o: src/kf_live.cpp.o
+.PHONY : src/kf_live.o
+
+# target to build an object file
+src/kf_live.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kf_live.dir/build.make CMakeFiles/kf_live.dir/src/kf_live.cpp.o
+.PHONY : src/kf_live.cpp.o
+
+src/kf_live.i: src/kf_live.cpp.i
+.PHONY : src/kf_live.i
+
+# target to preprocess a source file
+src/kf_live.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kf_live.dir/build.make CMakeFiles/kf_live.dir/src/kf_live.cpp.i
+.PHONY : src/kf_live.cpp.i
+
+src/kf_live.s: src/kf_live.cpp.s
+.PHONY : src/kf_live.s
+
+# target to generate assembly for a file
+src/kf_live.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kf_live.dir/build.make CMakeFiles/kf_live.dir/src/kf_live.cpp.s
+.PHONY : src/kf_live.cpp.s
+
+src/serial_port.o: src/serial_port.cpp.o
+.PHONY : src/serial_port.o
+
+# target to build an object file
+src/serial_port.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kf_live.dir/build.make CMakeFiles/kf_live.dir/src/serial_port.cpp.o
+.PHONY : src/serial_port.cpp.o
+
+src/serial_port.i: src/serial_port.cpp.i
+.PHONY : src/serial_port.i
+
+# target to preprocess a source file
+src/serial_port.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kf_live.dir/build.make CMakeFiles/kf_live.dir/src/serial_port.cpp.i
+.PHONY : src/serial_port.cpp.i
+
+src/serial_port.s: src/serial_port.cpp.s
+.PHONY : src/serial_port.s
+
+# target to generate assembly for a file
+src/serial_port.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kf_live.dir/build.make CMakeFiles/kf_live.dir/src/serial_port.cpp.s
+.PHONY : src/serial_port.cpp.s
 
 src/test_kf_standalone.o: src/test_kf_standalone.cpp.o
 .PHONY : src/test_kf_standalone.o
@@ -209,6 +276,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... kf_live"
 	@echo "... test_kf_standalone"
 	@echo "... src/imu_preprocessing.o"
 	@echo "... src/imu_preprocessing.i"
@@ -216,6 +284,12 @@ help:
 	@echo "... src/kalman_filter.o"
 	@echo "... src/kalman_filter.i"
 	@echo "... src/kalman_filter.s"
+	@echo "... src/kf_live.o"
+	@echo "... src/kf_live.i"
+	@echo "... src/kf_live.s"
+	@echo "... src/serial_port.o"
+	@echo "... src/serial_port.i"
+	@echo "... src/serial_port.s"
 	@echo "... src/test_kf_standalone.o"
 	@echo "... src/test_kf_standalone.i"
 	@echo "... src/test_kf_standalone.s"
