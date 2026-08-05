@@ -1,0 +1,9 @@
+Powershell admin: usbipd attach --wsl --busid 2-6 --auto-attach
+wsl terminal : ls /dev/ttyACM*
+
+Moteus libs:
+
+python3 -m moteus.moteus_tool --fdcanusb /dev/ttyACM0 -t 1 --dump-config > moteus_config.cfg
+
+
+36 (motor not configured)

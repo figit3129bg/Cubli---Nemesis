@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/CMakeFiles/moteus-populate"
+		},
+		{
+			"file" : "/home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/CMakeFiles/moteus-populate.rule"
+		},
+		{
+			"file" : "/home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/CMakeFiles/moteus-populate-complete.rule"
+		},
+		{
+			"file" : "/home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-build.rule"
+		},
+		{
+			"file" : "/home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-configure.rule"
+		},
+		{
+			"file" : "/home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-download.rule"
+		},
+		{
+			"file" : "/home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-install.rule"
+		},
+		{
+			"file" : "/home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-patch.rule"
+		},
+		{
+			"file" : "/home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-test.rule"
+		},
+		{
+			"file" : "/home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"moteus-populate"
+		],
+		"name" : "moteus-populate"
+	}
+}
