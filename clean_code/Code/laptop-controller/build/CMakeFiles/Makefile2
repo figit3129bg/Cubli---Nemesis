@@ -54,21 +54,23 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller
+CMAKE_SOURCE_DIR = /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build
+CMAKE_BINARY_DIR = /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
 all: CMakeFiles/moteus_app.dir/all
+all: CMakeFiles/lqr_controller.dir/all
 all: _deps/moteus-build/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/moteus_app.dir/codegen
+codegen: CMakeFiles/lqr_controller.dir/codegen
 codegen: _deps/moteus-build/codegen
 .PHONY : codegen
 
@@ -78,6 +80,7 @@ preinstall: _deps/moteus-build/preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/moteus_app.dir/clean
+clean: CMakeFiles/lqr_controller.dir/clean
 clean: _deps/moteus-build/clean
 .PHONY : clean
 
@@ -107,14 +110,14 @@ _deps/moteus-build/clean:
 CMakeFiles/moteus_app.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/moteus_app.dir/build.make CMakeFiles/moteus_app.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/moteus_app.dir/build.make CMakeFiles/moteus_app.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/CMakeFiles --progress-num=1,2 "Built target moteus_app"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/CMakeFiles --progress-num=5,6 "Built target moteus_app"
 .PHONY : CMakeFiles/moteus_app.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/moteus_app.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/moteus_app.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/CMakeFiles 0
 .PHONY : CMakeFiles/moteus_app.dir/rule
 
 # Convenience name for target.
@@ -124,13 +127,45 @@ moteus_app: CMakeFiles/moteus_app.dir/rule
 # codegen rule for target.
 CMakeFiles/moteus_app.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/moteus_app.dir/build.make CMakeFiles/moteus_app.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/CMakeFiles --progress-num=1,2 "Finished codegen for target moteus_app"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/CMakeFiles --progress-num=5,6 "Finished codegen for target moteus_app"
 .PHONY : CMakeFiles/moteus_app.dir/codegen
 
 # clean rule for target.
 CMakeFiles/moteus_app.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/moteus_app.dir/build.make CMakeFiles/moteus_app.dir/clean
 .PHONY : CMakeFiles/moteus_app.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/lqr_controller.dir
+
+# All Build rule for target.
+CMakeFiles/lqr_controller.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lqr_controller.dir/build.make CMakeFiles/lqr_controller.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lqr_controller.dir/build.make CMakeFiles/lqr_controller.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/CMakeFiles --progress-num=1,2,3,4 "Built target lqr_controller"
+.PHONY : CMakeFiles/lqr_controller.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/lqr_controller.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/lqr_controller.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/CMakeFiles 0
+.PHONY : CMakeFiles/lqr_controller.dir/rule
+
+# Convenience name for target.
+lqr_controller: CMakeFiles/lqr_controller.dir/rule
+.PHONY : lqr_controller
+
+# codegen rule for target.
+CMakeFiles/lqr_controller.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lqr_controller.dir/build.make CMakeFiles/lqr_controller.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/CMakeFiles --progress-num=1,2,3,4 "Finished codegen for target lqr_controller"
+.PHONY : CMakeFiles/lqr_controller.dir/codegen
+
+# clean rule for target.
+CMakeFiles/lqr_controller.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lqr_controller.dir/build.make CMakeFiles/lqr_controller.dir/clean
+.PHONY : CMakeFiles/lqr_controller.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

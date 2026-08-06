@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild
+CMAKE_SOURCE_DIR = /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-subbuild
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild
+CMAKE_BINARY_DIR = /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-subbuild
 
 # Utility rule file for moteus-populate.
 
@@ -77,60 +77,60 @@ CMakeFiles/moteus-populate-complete: moteus-populate-prefix/src/moteus-populate-
 CMakeFiles/moteus-populate-complete: moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-build
 CMakeFiles/moteus-populate-complete: moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-install
 CMakeFiles/moteus-populate-complete: moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-test
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'moteus-populate'"
-	/usr/bin/cmake -E make_directory /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/CMakeFiles
-	/usr/bin/cmake -E touch /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/CMakeFiles/moteus-populate-complete
-	/usr/bin/cmake -E touch /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-done
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'moteus-populate'"
+	/usr/bin/cmake -E make_directory /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-subbuild/CMakeFiles
+	/usr/bin/cmake -E touch /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-subbuild/CMakeFiles/moteus-populate-complete
+	/usr/bin/cmake -E touch /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-subbuild/moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-done
 
 moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-update:
 .PHONY : moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-update
 
 moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-build: moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-configure
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "No build step for 'moteus-populate'"
-	cd /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-build && /usr/bin/cmake -E echo_append
-	cd /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-build && /usr/bin/cmake -E touch /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "No build step for 'moteus-populate'"
+	cd /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-build && /usr/bin/cmake -E echo_append
+	cd /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-build && /usr/bin/cmake -E touch /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-subbuild/moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-build
 
 moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-configure: moteus-populate-prefix/tmp/moteus-populate-cfgcmd.txt
 moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-configure: moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-patch
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "No configure step for 'moteus-populate'"
-	cd /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-build && /usr/bin/cmake -E echo_append
-	cd /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-build && /usr/bin/cmake -E touch /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-configure
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "No configure step for 'moteus-populate'"
+	cd /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-build && /usr/bin/cmake -E echo_append
+	cd /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-build && /usr/bin/cmake -E touch /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-subbuild/moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-configure
 
 moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-download: moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-gitinfo.txt
 moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-download: moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-mkdir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Performing download step (git clone) for 'moteus-populate'"
-	cd /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps && /usr/bin/cmake -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/moteus-populate-prefix/tmp/moteus-populate-gitclone.cmake
-	cd /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps && /usr/bin/cmake -E touch /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-download
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Performing download step (git clone) for 'moteus-populate'"
+	cd /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps && /usr/bin/cmake -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-subbuild/moteus-populate-prefix/tmp/moteus-populate-gitclone.cmake
+	cd /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps && /usr/bin/cmake -E touch /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-subbuild/moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-download
 
 moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-install: moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "No install step for 'moteus-populate'"
-	cd /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-build && /usr/bin/cmake -E echo_append
-	cd /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-build && /usr/bin/cmake -E touch /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-install
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "No install step for 'moteus-populate'"
+	cd /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-build && /usr/bin/cmake -E echo_append
+	cd /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-build && /usr/bin/cmake -E touch /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-subbuild/moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-install
 
 moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-mkdir:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'moteus-populate'"
-	/usr/bin/cmake -Dcfgdir= -P /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/moteus-populate-prefix/tmp/moteus-populate-mkdirs.cmake
-	/usr/bin/cmake -E touch /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-mkdir
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'moteus-populate'"
+	/usr/bin/cmake -Dcfgdir= -P /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-subbuild/moteus-populate-prefix/tmp/moteus-populate-mkdirs.cmake
+	/usr/bin/cmake -E touch /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-subbuild/moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-mkdir
 
 moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-patch: moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-patch-info.txt
 moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-patch: moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-update
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'moteus-populate'"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'moteus-populate'"
 	/usr/bin/cmake -E echo_append
-	/usr/bin/cmake -E touch /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-patch
+	/usr/bin/cmake -E touch /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-subbuild/moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-patch
 
 moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-update:
 .PHONY : moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-update
 
 moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-test: moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-install
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "No test step for 'moteus-populate'"
-	cd /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-build && /usr/bin/cmake -E echo_append
-	cd /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-build && /usr/bin/cmake -E touch /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-test
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "No test step for 'moteus-populate'"
+	cd /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-build && /usr/bin/cmake -E echo_append
+	cd /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-build && /usr/bin/cmake -E touch /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-subbuild/moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-test
 
 moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-update: moteus-populate-prefix/tmp/moteus-populate-gitupdate.cmake
 moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-update: moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-update-info.txt
 moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-update: moteus-populate-prefix/src/moteus-populate-stamp/moteus-populate-download
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Performing update step for 'moteus-populate'"
-	cd /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-src && /usr/bin/cmake -Dcan_fetch=YES -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/moteus-populate-prefix/tmp/moteus-populate-gitupdate.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Performing update step for 'moteus-populate'"
+	cd /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-src && /usr/bin/cmake -Dcan_fetch=YES -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-subbuild/moteus-populate-prefix/tmp/moteus-populate-gitupdate.cmake
 
 CMakeFiles/moteus-populate.dir/codegen:
 .PHONY : CMakeFiles/moteus-populate.dir/codegen
@@ -157,6 +157,6 @@ CMakeFiles/moteus-populate.dir/clean:
 .PHONY : CMakeFiles/moteus-populate.dir/clean
 
 CMakeFiles/moteus-populate.dir/depend:
-	cd /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/CMakeFiles/moteus-populate.dir/DependInfo.cmake "--color=$(COLOR)" moteus-populate
+	cd /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-subbuild && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-subbuild /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-subbuild /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-subbuild /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-subbuild /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-subbuild/CMakeFiles/moteus-populate.dir/DependInfo.cmake "--color=$(COLOR)" moteus-populate
 .PHONY : CMakeFiles/moteus-populate.dir/depend
 

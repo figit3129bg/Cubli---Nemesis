@@ -1,8 +1,8 @@
 {
 	"InstallScripts" : 
 	[
-		"/home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/cmake_install.cmake",
-		"/home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-build/cmake_install.cmake"
+		"/home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/cmake_install.cmake",
+		"/home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller
+CMAKE_SOURCE_DIR = /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build
+CMAKE_BINARY_DIR = /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/CMakeFiles /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/CMakeFiles /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,6 +129,67 @@ moteus_app/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/moteus_app.dir/build.make CMakeFiles/moteus_app.dir/build
 .PHONY : moteus_app/fast
 
+#=============================================================================
+# Target rules for targets named lqr_controller
+
+# Build rule for target.
+lqr_controller: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lqr_controller
+.PHONY : lqr_controller
+
+# fast build rule for target.
+lqr_controller/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lqr_controller.dir/build.make CMakeFiles/lqr_controller.dir/build
+.PHONY : lqr_controller/fast
+
+Kalman.o: Kalman.cpp.o
+.PHONY : Kalman.o
+
+# target to build an object file
+Kalman.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lqr_controller.dir/build.make CMakeFiles/lqr_controller.dir/Kalman.cpp.o
+.PHONY : Kalman.cpp.o
+
+Kalman.i: Kalman.cpp.i
+.PHONY : Kalman.i
+
+# target to preprocess a source file
+Kalman.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lqr_controller.dir/build.make CMakeFiles/lqr_controller.dir/Kalman.cpp.i
+.PHONY : Kalman.cpp.i
+
+Kalman.s: Kalman.cpp.s
+.PHONY : Kalman.s
+
+# target to generate assembly for a file
+Kalman.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lqr_controller.dir/build.make CMakeFiles/lqr_controller.dir/Kalman.cpp.s
+.PHONY : Kalman.cpp.s
+
+lqr.o: lqr.cpp.o
+.PHONY : lqr.o
+
+# target to build an object file
+lqr.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lqr_controller.dir/build.make CMakeFiles/lqr_controller.dir/lqr.cpp.o
+.PHONY : lqr.cpp.o
+
+lqr.i: lqr.cpp.i
+.PHONY : lqr.i
+
+# target to preprocess a source file
+lqr.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lqr_controller.dir/build.make CMakeFiles/lqr_controller.dir/lqr.cpp.i
+.PHONY : lqr.cpp.i
+
+lqr.s: lqr.cpp.s
+.PHONY : lqr.s
+
+# target to generate assembly for a file
+lqr.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lqr_controller.dir/build.make CMakeFiles/lqr_controller.dir/lqr.cpp.s
+.PHONY : lqr.cpp.s
+
 moteus.o: moteus.cpp.o
 .PHONY : moteus.o
 
@@ -153,6 +214,30 @@ moteus.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/moteus_app.dir/build.make CMakeFiles/moteus_app.dir/moteus.cpp.s
 .PHONY : moteus.cpp.s
 
+serial_port.o: serial_port.cpp.o
+.PHONY : serial_port.o
+
+# target to build an object file
+serial_port.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lqr_controller.dir/build.make CMakeFiles/lqr_controller.dir/serial_port.cpp.o
+.PHONY : serial_port.cpp.o
+
+serial_port.i: serial_port.cpp.i
+.PHONY : serial_port.i
+
+# target to preprocess a source file
+serial_port.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lqr_controller.dir/build.make CMakeFiles/lqr_controller.dir/serial_port.cpp.i
+.PHONY : serial_port.cpp.i
+
+serial_port.s: serial_port.cpp.s
+.PHONY : serial_port.s
+
+# target to generate assembly for a file
+serial_port.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lqr_controller.dir/build.make CMakeFiles/lqr_controller.dir/serial_port.cpp.s
+.PHONY : serial_port.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -161,10 +246,20 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... lqr_controller"
 	@echo "... moteus_app"
+	@echo "... Kalman.o"
+	@echo "... Kalman.i"
+	@echo "... Kalman.s"
+	@echo "... lqr.o"
+	@echo "... lqr.i"
+	@echo "... lqr.s"
 	@echo "... moteus.o"
 	@echo "... moteus.i"
 	@echo "... moteus.s"
+	@echo "... serial_port.o"
+	@echo "... serial_port.i"
+	@echo "... serial_port.s"
 .PHONY : help
 
 

@@ -1,5 +1,5 @@
 CMakeFiles/moteus_app.dir/moteus.cpp.o: \
- /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/moteus.cpp \
+ /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/moteus.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/15/atomic \
  /usr/include/c++/15/bits/version.h \
  /usr/include/x86_64-linux-gnu/c++/15/bits/c++config.h \
@@ -72,17 +72,13 @@ CMakeFiles/moteus_app.dir/moteus.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/select.h \
  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/select2.h \
- /usr/include/x86_64-linux-gnu/bits/select-decl.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib.h \
  /usr/include/c++/15/bits/specfun.h \
  /usr/include/c++/15/bits/stl_algobase.h \
  /usr/include/c++/15/bits/functexcept.h \
@@ -130,8 +126,6 @@ CMakeFiles/moteus_app.dir/moteus.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
- /usr/include/x86_64-linux-gnu/bits/unistd.h \
- /usr/include/x86_64-linux-gnu/bits/unistd-decl.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
  /usr/include/linux/close_range.h \
  /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
@@ -149,8 +143,6 @@ CMakeFiles/moteus_app.dir/moteus.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h \
- /usr/include/x86_64-linux-gnu/bits/wchar2.h \
  /usr/include/c++/15/exception /usr/include/c++/15/bits/exception_ptr.h \
  /usr/include/c++/15/bits/cxxabi_init_exception.h \
  /usr/include/c++/15/typeinfo /usr/include/c++/15/bits/hash_bytes.h \
@@ -206,11 +198,9 @@ CMakeFiles/moteus_app.dir/moteus.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h \
- /usr/include/x86_64-linux-gnu/bits/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/stdio2.h /usr/include/c++/15/cerrno \
- /usr/include/errno.h /usr/include/x86_64-linux-gnu/bits/errno.h \
- /usr/include/linux/errno.h /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/c++/15/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/15/bits/charconv.h \
@@ -236,7 +226,7 @@ CMakeFiles/moteus_app.dir/moteus.cpp.o: \
  /usr/include/c++/15/bits/std_thread.h \
  /usr/include/c++/15/bits/unique_ptr.h \
  /usr/include/c++/15/bits/this_thread_sleep.h \
- /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-src/lib/cpp/mjbots/moteus/moteus.h \
+ /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-src/lib/cpp/mjbots/moteus/moteus.h \
  /usr/include/c++/15/map /usr/include/c++/15/bits/stl_tree.h \
  /usr/include/c++/15/ext/aligned_buffer.h \
  /usr/include/c++/15/bits/node_handle.h \
@@ -260,25 +250,21 @@ CMakeFiles/moteus_app.dir/moteus.cpp.o: \
  /usr/include/c++/15/bits/stl_vector.h \
  /usr/include/c++/15/bits/stl_bvector.h \
  /usr/include/c++/15/bits/vector.tcc \
- /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-src/lib/cpp/mjbots/moteus/moteus_optional.h \
- /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-src/lib/cpp/mjbots/moteus/moteus_protocol.h \
+ /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-src/lib/cpp/mjbots/moteus/moteus_optional.h \
+ /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-src/lib/cpp/mjbots/moteus/moteus_protocol.h \
  /usr/include/string.h /usr/include/strings.h \
- /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
- /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
- /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-src/lib/cpp/mjbots/moteus/moteus_multiplex.h \
+ /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-src/lib/cpp/mjbots/moteus/moteus_multiplex.h \
  /usr/include/c++/15/math.h \
- /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-src/lib/cpp/mjbots/moteus/moteus_tokenizer.h \
+ /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-src/lib/cpp/mjbots/moteus/moteus_tokenizer.h \
  /usr/include/c++/15/cstring \
- /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-src/lib/cpp/mjbots/moteus/moteus_transport.h \
+ /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-src/lib/cpp/mjbots/moteus/moteus_transport.h \
  /usr/include/fcntl.h /usr/include/x86_64-linux-gnu/bits/fcntl.h \
  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
  /usr/include/linux/falloc.h /usr/include/linux/openat2.h \
  /usr/include/x86_64-linux-gnu/bits/openat2.h \
- /usr/include/x86_64-linux-gnu/bits/fcntl-linux-fortify.h \
  /usr/include/x86_64-linux-gnu/bits/stat.h \
- /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
- /usr/include/x86_64-linux-gnu/bits/fcntl2.h /usr/include/glob.h \
+ /usr/include/x86_64-linux-gnu/bits/struct_stat.h /usr/include/glob.h \
  /usr/include/linux/can.h /usr/include/linux/socket.h \
  /usr/include/linux/can/raw.h /usr/include/linux/serial.h \
  /usr/include/linux/const.h /usr/include/linux/tty_flags.h \
@@ -299,10 +285,8 @@ CMakeFiles/moteus_app.dir/moteus.cpp.o: \
  /usr/include/x86_64-linux-gnu/asm/sockios.h \
  /usr/include/asm-generic/sockios.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
- /usr/include/x86_64-linux-gnu/bits/socket2.h /usr/include/poll.h \
- /usr/include/x86_64-linux-gnu/sys/poll.h \
+ /usr/include/poll.h /usr/include/x86_64-linux-gnu/sys/poll.h \
  /usr/include/x86_64-linux-gnu/bits/poll.h \
- /usr/include/x86_64-linux-gnu/bits/poll2.h \
  /usr/include/x86_64-linux-gnu/sys/ioctl.h \
  /usr/include/x86_64-linux-gnu/bits/ioctls.h \
  /usr/include/x86_64-linux-gnu/asm/ioctls.h \

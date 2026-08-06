@@ -20,9 +20,6 @@ events:
     names:
       - "uname"
     candidate_directories:
-      - "/home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/.venv/bin/"
-      - "/home/ubuntu_varty/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/home/ubuntu_varty/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/home/ubuntu_varty/.vscode-server/bin/e4c7e7b1d6d060162f4aa7f8225271b67ce1df75/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
@@ -66,9 +63,6 @@ events:
       - "/snap/bin/"
       - "/home/ubuntu_varty/.platformio/penv/bin/"
     searched_directories:
-      - "/home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/.venv/bin/uname"
-      - "/home/ubuntu_varty/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/uname"
-      - "/home/ubuntu_varty/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/uname"
       - "/home/ubuntu_varty/.vscode-server/bin/e4c7e7b1d6d060162f4aa7f8225271b67ce1df75/bin/remote-cli/uname"
       - "/usr/local/sbin/uname"
       - "/usr/local/bin/uname"
@@ -76,9 +70,6 @@ events:
     found: "/usr/bin/uname"
     search_context:
       ENV{PATH}:
-        - "/home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/.venv/bin"
-        - "/home/ubuntu_varty/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/home/ubuntu_varty/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
         - "/home/ubuntu_varty/.vscode-server/bin/e4c7e7b1d6d060162f4aa7f8225271b67ce1df75/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"

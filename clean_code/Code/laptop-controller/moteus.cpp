@@ -30,13 +30,15 @@ int main(int argc, char** argv) {
   moteus::Controller controller(options);
   controller.SetStop();
 
-  const double target_torque_Nm = 0.01;
-  const double max_torque_Nm    = 0.01;
+
+  const double target_torque_Nm = 0.005;
+  const double max_torque_Nm    = 0.005;
 
   // Command is built ONCE, outside the loop
   moteus::PositionMode::Command command;
   command.position            = std::numeric_limits<double>::quiet_NaN();
-  command.velocity            =  20;     //std::numeric_limits<double>::quiet_NaN();
+  //command.velocity            =  std::numeric_limits<double>::quiet_NaN();
+  command.velocity            = 1;
   command.kp_scale            = 0.0;
   command.kd_scale            = 1.0;
   command.feedforward_torque  = target_torque_Nm;

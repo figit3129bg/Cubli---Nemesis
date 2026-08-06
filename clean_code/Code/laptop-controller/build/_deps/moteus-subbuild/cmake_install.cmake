@@ -1,4 +1,4 @@
-# Install script for directory: /home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild
+# Install script for directory: /home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-subbuild
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,7 +40,7 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/install_local_manifest.txt"
+  file(WRITE "/home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-subbuild/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -56,6 +56,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-subbuild/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-subbuild/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

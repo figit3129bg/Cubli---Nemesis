@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/moteus.cpp" "CMakeFiles/moteus_app.dir/moteus.cpp.o" "gcc" "CMakeFiles/moteus_app.dir/moteus.cpp.o.d"
+  "/home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/moteus.cpp" "CMakeFiles/moteus_app.dir/moteus.cpp.o" "gcc" "CMakeFiles/moteus_app.dir/moteus.cpp.o.d"
   "" "moteus_app" "gcc" "CMakeFiles/moteus_app.dir/link.d"
   )
 

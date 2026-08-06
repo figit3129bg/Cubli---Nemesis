@@ -28,8 +28,8 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 include(ExternalProject)
 ExternalProject_Add(moteus-populate
                      "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/mjbots/moteus.git" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "GIT_TAG" "main"
-                    SOURCE_DIR          "/home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-src"
-                    BINARY_DIR          "/home/ubuntu_varty/projects/2d_cubli/Code/laptop-controller/build/_deps/moteus-build"
+                    SOURCE_DIR          "/home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-src"
+                    BINARY_DIR          "/home/ubuntu_varty/projects/2d_cubli/clean_code/Code/laptop-controller/build/_deps/moteus-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""
