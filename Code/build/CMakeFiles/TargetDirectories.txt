@@ -1,5 +1,0 @@
-/home/ubuntu_varty/projects/cubli-esp32/build/CMakeFiles/moteus_test.dir
-/home/ubuntu_varty/projects/cubli-esp32/build/CMakeFiles/edit_cache.dir
-/home/ubuntu_varty/projects/cubli-esp32/build/CMakeFiles/rebuild_cache.dir
-/home/ubuntu_varty/projects/cubli-esp32/build/_deps/moteus-build/CMakeFiles/edit_cache.dir
-/home/ubuntu_varty/projects/cubli-esp32/build/_deps/moteus-build/CMakeFiles/rebuild_cache.dir

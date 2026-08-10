@@ -1,8 +1,0 @@
-[
-{
-  "directory": "/home/ubuntu_varty/projects/cubli-esp32/build",
-  "command": "/usr/bin/c++  -I/home/ubuntu_varty/projects/cubli-esp32/build/_deps/moteus-src/lib/cpp/mjbots/moteus  -o CMakeFiles/moteus_test.dir/src/moteus_n1.cpp.o -c /home/ubuntu_varty/projects/cubli-esp32/src/moteus_n1.cpp",
-  "file": "/home/ubuntu_varty/projects/cubli-esp32/src/moteus_n1.cpp",
-  "output": "CMakeFiles/moteus_test.dir/src/moteus_n1.cpp.o"
-}
-]
