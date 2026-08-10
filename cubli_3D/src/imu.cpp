@@ -91,8 +91,12 @@ void imu_loop()
     theta_b_dotX = imu.data.gyroX;
     theta_b_dotY = imu.data.gyroY;
     theta_b_dotZ = imu.data.gyroZ;
+
+    //remember to change for 3D
     theta_b_dot = imu.data.gyroZ * PI / 180.0f;
     theta_b_accel = atan2(imu.data.accelX, imu.data.accelY);
+    ///
+
     float z = wrapToPi(theta_b_accel - theta_offset);
     if (first_run)
     {
@@ -104,9 +108,11 @@ void imu_loop()
     theta_b = wrapToPi(theta_pred + (1.0f - ALPHA) * wrapToPi(z - theta_pred));
     theta_b_prev = theta_b;
 
+    //add calc for theta_b 3D
+
    /*  Serial.print(theta_b, 6);
     Serial.print(",");
     Serial.println(theta_b_dot, 6); */
-    delay(0.1f);
+    delay(1);
 
 }
