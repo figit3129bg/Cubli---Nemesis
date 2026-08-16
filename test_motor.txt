@@ -1,0 +1,1 @@
+1. calibrate moteus python -m moteus.moteus_tool --target 1 --calibrate
