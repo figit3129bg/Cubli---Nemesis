@@ -33,7 +33,8 @@ void CalibrateZero() {
     //     delay(5);
     // }
     // theta_offset = sum / N;
-    theta_offset = -2.3681;
+    //theta_offset = -2.3681;
+    theta_offset = -2.3651;
 
     Serial.print("theta_offset (rad): ");
     Serial.print(theta_offset, 4);
@@ -112,13 +113,13 @@ Moteus::PositionMode::Format commandFormat = []() {
 }();
 
 // LQR state-feedback gains (theta_b, theta_b_dot, theta_w_dot -> torque).
-constexpr float kK1 = -13.0356;   // theta_b     [rad]   -> N*m
-constexpr float kK2 = -2.3862;   // theta_b_dot [rad/s] -> N*m
-constexpr float kK3 = -0.0003; 
+constexpr float kK1 = -15.20902f;   // theta_b     [rad]   -> N*m
+constexpr float kK2 = -3.33702869f;   // theta_b_dot [rad/s] -> N*m
+constexpr float kK3 = -0.00290166f; 
 
-// constexpr float kK1 = -10.0468;   // theta_b     [rad]   -> N*m
-// constexpr float kK2 = -0.5838;   // theta_b_dot [rad/s] -> N*m
-// constexpr float kK3 = -0.0003; 
+// constexpr float kK1 = -2.4965358f;   // theta_b     [rad]   -> N*m
+// constexpr float kK2 = -0.937071115949f;   // theta_b_dot [rad/s] -> N*m
+// constexpr float kK3 = -0.00029f; 
 
 
 // Safety ceiling sent to moteus with every command; also clamps the
@@ -128,7 +129,7 @@ constexpr float kMaxTorqueNm = 0.25f;
 // Reaction-wheel speed ceiling [rad/s] -- tune to your wheel/motor's safe
 // max. Torque that would accelerate the wheel further once it's past this
 // is zeroed; torque that slows it back down is still allowed through.
-constexpr float kMaxWheelSpeedRadPerSec = 200.0f;
+constexpr float kMaxWheelSpeedRadPerSec = 250.0f;
 
 float theta_w_dot = 0.0f;  // reaction wheel rate, fed back from moteus
 float prev_torque = 0.0f;  // torque commanded last cycle; the KF's input Tm
@@ -236,7 +237,7 @@ void loop() {
     command.velocity           = NAN;
     command.kp_scale           = 0.0f;
     command.kd_scale           = 0.0f;
-    command.feedforward_torque = 0.02f;
+    command.feedforward_torque = torque;
     command.maximum_torque     = kMaxTorqueNm;
 
     // Moteus::QueryCommand qc;
@@ -256,27 +257,30 @@ void loop() {
         Serial.println("no response from moteus!");
     }
 
-    // Serial.print(theta_w_dot, 6);
-    // Serial.print(",");
-    // Serial.print(torque_raw, 6);
-    // Serial.print(",");
-    Serial.print(qc_current1, 6);
-    Serial.print(",");
-    Serial.print(theta_w_dot, 6);
-    Serial.print(",");
-    Serial.print(reported_torque - torque_raw, 6);
-    Serial.print("\n");
-    
-    
-    //  Serial.print(theta_b, 6);
+
+    // //Serial.println(delta_t, 6);
+    // //Serial.print(",");
+    // // Serial.print(theta_w_dot, 6);
+    // // Serial.print(",");
+    //  Serial.print(torque_raw, 6);
     //  Serial.print(",");
+    // //Serial.print(qc_current1, 6);
+    // //Serial.print(",");
+    // //Serial.print(theta_w_dot, 6);
+    // //Serial.print(",");
+    // Serial.print(reported_torque, 6);
+    // Serial.print(",");
+    
+    
+    //  Serial.print(theta_w_dot, 6);
+    //  Serial.print("\n");
     //  Serial.print(theta_b_dot, 6);
     //  Serial.print(",");
     //  Serial.print(theta_w_dot, 6);
     //  Serial.print(",");
-    //  Serial.print(torque, 6);
-    //  Serial.print(",");
+    //   Serial.print(torque, 6);
+    //   Serial.print("\n");
     //  Serial.print(torque_raw, 6);
     //  Serial.print(",");
-    //  Serial.println(delta_t, 6);
+    
 }
