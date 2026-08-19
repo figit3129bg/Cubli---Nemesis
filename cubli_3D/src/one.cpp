@@ -6,11 +6,47 @@
 #include "SparkFun_BMI270_Arduino_Library.h"
 #include <cmath>
 
-BMI270 imu;
+
 uint8_t i2cAddress = BMI2_I2C_PRIM_ADDR;
+
+BMI270 imu;
+
+
+
+
+// IMU calibration constants -- pasted verbatim from the face-rest wizard
+// (see Documents/PlatformIO/Projects/calibration IMU/src/calibrate.cpp).
+// Correction formulas (same convention the wizard's own STEP 7 verification
+// uses):
+//   accel [m/s^2] = (raw_g * kG0 - kAccelOffset) / kAccelScale
+//   gyro  [rad/s] = raw_dps * (PI/180) - kGyroBias
+// Axis order for all three arrays is X, Y, Z (matches imu.data.accel*/gyro*).
+//
+// TODO(you): the wizard's own STEP 7 verification came back
+// |a_corrected| = 17.48 m/s^2 (expected ~9.81) with a WARNING -- that's
+// suspiciously close to 9.81 / kAccelScale[2], which points at a bad
+// kAccelScale fit (check kFacePoses axis/sign and kTheta1/2/3Deg against the
+// real corner mount) rather than sensor noise. Gyro bias looked fine
+// (verify-step gyro ~0.007 dps). Re-run the wizard and confirm |a_corrected|
+// lands within ~0.3 m/s^2 of 9.8067 before trusting theta_b for control.
+static const float kG0 = 9.80665f;  // g -> m/s^2
+static const float kGyroBias[3]    = { -0.000365f, -0.008767f, -0.002141f };  // rad/s
+static const float kAccelOffset[3] = { +0.032289f, -0.123289f, +0.002387f };  // m/s^2
+static const float kAccelScale[3]  = { +0.822784f, +0.710567f, +0.586438f };
 
 float theta_b_dot, theta_b_accel, theta_b;
 float theta_offset = 0.0f;
+
+// Applies kGyroBias/kAccelOffset/kAccelScale to the IMU's last-read sample
+// (call imu.getSensorData() first). accelOut is m/s^2, gyroOut is rad/s.
+void applyImuCalibration(float accelOut[3], float gyroOut[3]) {
+    const float rawAccelG[3]  = { imu.data.accelX, imu.data.accelY, imu.data.accelZ };
+    const float rawGyroDps[3] = { imu.data.gyroX,  imu.data.gyroY,  imu.data.gyroZ };
+    for (int i = 0; i < 3; i++) {
+        accelOut[i] = (rawAccelG[i] * kG0 - kAccelOffset[i]) / kAccelScale[i];
+        gyroOut[i]  = rawGyroDps[i] * (PI / 180.0f) - kGyroBias[i];
+    }
+}
 
 float wrapToPi(float angle)
 {
@@ -24,31 +60,47 @@ void CalibrateZero() {
     Serial.println("Hold the cube steady at the -135 deg position now.");
     delay(1000);
 
-    // const int N = 200;
-    // double sum = 0;
-    // for (int i = 0; i < N; i++)
-    // {
-    //     imu.getSensorData();
-    //     sum += atan2(imu.data.accelX, imu.data.accelY);
-    //     delay(5);
-    // }
-    // theta_offset = sum / N;
+    const int N = 200;
+    double sum = 0;
+    for (int i = 0; i < N; i++)
+    {
+        imu.getSensorData();
+        float accel[3], gyro[3];
+        applyImuCalibration(accel, gyro);
+        sum += atan2(accel[0], accel[1]);
+        delay(5);
+    }
+    theta_offset = sum / N;
+    
+    //theta_offset = 2.37;
+    //theta_offset = -2.359;
     //theta_offset = -2.3681;
-    theta_offset = -2.3651;
+    //theta_offset = -2.3651;
+    //theta_offset = -2.3493;
+    //-2.372 behaves very nicely
+    //theta_offset = 2.372;
+    //theta_offset = -2.3715;
+    //theta_offset = -2.3711;
+    //theta_offset = -2.3715;
+    //theta_offset = -2.374;
+    //theta_offset = 2.3592; 2.3722; 2.3661
+    //theta_offset = -2.5348;
 
     Serial.print("theta_offset (rad): ");
     Serial.print(theta_offset, 4);
     Serial.print("  (deg): ");
     Serial.println(theta_offset * 180.0 / PI, 2);
 
-    //delay(3000);
+    delay(3000);
 
 }
+
+unsigned long t_start_ms = 0;
 
 void imu_setup()
 {
     Serial.begin(115200);
-    // while (!Serial) { delay(10); }  // blocks forever with no monitor attached -- see chat
+    while (!Serial) { delay(10); }
 
     Serial.println("BMI270 Example 1 - Basic Readings I2C");
     Wire.begin();
@@ -70,12 +122,15 @@ void imu_loop() {
 
     imu.getSensorData();
 
+    float accel[3], gyro[3];
+    applyImuCalibration(accel, gyro);
+
     uint32_t t_now_us = micros();
     float dt = (t_now_us - t_prev_us) * 1e-6f;
     t_prev_us = t_now_us;
 
-    theta_b_dot = imu.data.gyroZ * PI / 180.0f;
-    theta_b_accel = atan2(imu.data.accelX, imu.data.accelY);
+    theta_b_dot = gyro[2];  // rad/s, bias-corrected
+    theta_b_accel = atan2(accel[0], accel[1]);
 
     float z = wrapToPi(theta_b_accel - theta_offset);
 
@@ -95,7 +150,7 @@ void imu_loop() {
 ACAN_T4FD_Settings canSettings(1000000, DataBitRateFactor::x1);
 MoteusTeensyCanFD canBus(ACAN_T4::can3, canSettings);
 
-Moteus controller(canBus, []() {
+Moteus controller1(canBus, []() {
     Moteus::Options options;
     options.id = 1;
     return options;
@@ -113,14 +168,9 @@ Moteus::PositionMode::Format commandFormat = []() {
 }();
 
 // LQR state-feedback gains (theta_b, theta_b_dot, theta_w_dot -> torque).
-constexpr float kK1 = -15.20902f;   // theta_b     [rad]   -> N*m
-constexpr float kK2 = -3.33702869f;   // theta_b_dot [rad/s] -> N*m
-constexpr float kK3 = -0.00290166f; 
-
-// constexpr float kK1 = -2.4965358f;   // theta_b     [rad]   -> N*m
-// constexpr float kK2 = -0.937071115949f;   // theta_b_dot [rad/s] -> N*m
-// constexpr float kK3 = -0.00029f; 
-
+constexpr float kK1 = -3.5963;   // theta_b     [rad]   -> N*m
+constexpr float kK2 = -0.2107;   // theta_b_dot [rad/s] -> N*m
+constexpr float kK3 = -0.0006928; 
 
 // Safety ceiling sent to moteus with every command; also clamps the
 // computed control effort so a bad IMU sample can't demand a torque spike.
@@ -129,7 +179,7 @@ constexpr float kMaxTorqueNm = 0.25f;
 // Reaction-wheel speed ceiling [rad/s] -- tune to your wheel/motor's safe
 // max. Torque that would accelerate the wheel further once it's past this
 // is zeroed; torque that slows it back down is still allowed through.
-constexpr float kMaxWheelSpeedRadPerSec = 250.0f;
+constexpr float kMaxWheelSpeedRadPerSec = 200.0f;
 
 float theta_w_dot = 0.0f;  // reaction wheel rate, fed back from moteus
 float prev_torque = 0.0f;  // torque commanded last cycle; the KF's input Tm
@@ -148,7 +198,7 @@ void checkSafetyStop() {
         char c = Serial.read();
         if (c == 's' || c == 'S') {
             motorsStopped = true;
-            controller.SetStop();
+            controller1.SetStop();
             Serial.println("!!! SAFETY STOP: motors halted immediately !!!");
         }
     }
@@ -166,9 +216,10 @@ void setup() {
         delay(1000);
     }
 
-    controller.SetStop();  // clear any faults before starting
+    controller1.SetStop();  // clear any faults before starting
     //Serial.println("Send 's' or 'S' at any time to immediately stop the motors (safety brake).");
    // Serial.println("theta_b,theta_b_dot,theta_w_dot,torque,torque_raw,delta_t");
+     t_start_ms = millis();
 }
 
 void loop() {
@@ -176,7 +227,7 @@ void loop() {
     if (motorsStopped) {
         // Keep telling the moteus to stop every cycle instead of trusting a
         // single command to have landed.
-        controller.SetStop();
+        controller1.SetStop();
         delay(10);
         return;
     }
@@ -198,13 +249,6 @@ void loop() {
         //Serial.println("theta_b,theta_b_dot,theta_w_dot,torque,torque_raw,delta_t");
     }
 
-    // 1. call jump          -- TODO: jump.cpp has no code yet
-    // 2. call servo brake   -- brakeUpdate() below; brakeTrigger() not wired
-    //                          to a condition yet, call it from wherever
-    //                          should fire the brake
-    // 3. call stabilization code (lqr)
-    // end loop
-    // brakeUpdate();
 
     imu_loop();
 
@@ -247,40 +291,42 @@ void loop() {
     //float qc_current1 = qc.q_current;
 
     float reported_torque = 0.0f;
-    const bool got_result = controller.SetPosition(command, &commandFormat);
+    const bool got_result = controller1.SetPosition(command, &commandFormat);
     if (got_result) {
         // moteus reports output revolutions/s; convert to rad/s to match
         // theta_b_dot's units for the next control cycle.
-        theta_w_dot = controller.last_result().values.velocity * 2.0f * PI;
-        reported_torque = controller.last_result().values.torque;
+        theta_w_dot = controller1.last_result().values.velocity * 2.0f * PI;
+        reported_torque = controller1.last_result().values.torque;
     } else {
         Serial.println("no response from moteus!");
     }
 
-
-    // //Serial.println(delta_t, 6);
-    // //Serial.print(",");
+    //const float t_s = (millis() - t_start_ms) / 1000.0f;
+    //Serial.println(t_s, 6);
+    //Serial.print(",");
     // // Serial.print(theta_w_dot, 6);
     // // Serial.print(",");
     //  Serial.print(torque_raw, 6);
     //  Serial.print(",");
     // //Serial.print(qc_current1, 6);
     // //Serial.print(",");
-    // //Serial.print(theta_w_dot, 6);
-    // //Serial.print(",");
-    // Serial.print(reported_torque, 6);
-    // Serial.print(",");
+    //Serial.print(theta_w_dot, 6);
+    //Serial.print(",");
+     Serial.print(reported_torque, 6);
+     Serial.print(",");
     
     
     //  Serial.print(theta_w_dot, 6);
     //  Serial.print("\n");
-    //  Serial.print(theta_b_dot, 6);
-    //  Serial.print(",");
-    //  Serial.print(theta_w_dot, 6);
-    //  Serial.print(",");
+      Serial.print(theta_b, 6);
+      Serial.print(",");
+      Serial.print(theta_b_dot, 6);
+      Serial.print(",");
+      Serial.print(theta_w_dot, 6);
+      Serial.print(",");
     //   Serial.print(torque, 6);
     //   Serial.print("\n");
-    //  Serial.print(torque_raw, 6);
-    //  Serial.print(",");
+      Serial.print(torque_raw, 6);
+      Serial.print(",\n");
     
 }
